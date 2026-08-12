@@ -1,0 +1,202 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #24313a;
+    background-color: #f4f7f8;
+}
+
+/* Skip to Main Content */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+    padding: 10px 16px;
+    background-color: white;
+    color: #12343b;
+    border: 2px solid #12343b;
+    border-radius: 6px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
+/* Header */
+header {
+    background-color: #12343b;
+    color: white;
+    padding: 24px 5%;
+}
+
+header h1 {
+    margin: 0 0 6px;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Navigation - FLEX */
+nav {
+    margin-top: 18px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 10px 16px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #2f6f7e;
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+/* Main */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+section {
+    margin-top: 40px;
+}
+
+/* HERO - GRID */
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+/* CARD GRID */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE BOX MODEL */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    border: 4px solid #2f6f7e;
+    padding: 6px;
+    border-radius: 12px;
+
+    background-color: white;
+}
+
+/* GALLERY - FLEX */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery figure {
+    flex: 1 1 280px;
+    max-width: 340px;
+    margin: 0;
+    background-color: white;
+    padding: 14px;
+    border-radius: 12px;
+}
+
+/* NTH-CHILD SELECTOR */
+.gallery figure:nth-child(even) {
+    border-radius: 28px 8px 28px 8px;
+}
+
+/* HOVER EFFECT */
+.gallery img {
+    transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    background-color: #d66a3d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #a94722;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    padding: 24px 5%;
+    background-color: #12343b;
+    color: white;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 750px) {
+    .hero,
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+}
